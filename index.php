@@ -31,7 +31,7 @@
         $servername = "localhost";
         $username = "behnam";
         $password = "123456";
-        $database = "myshop";
+        $database = "crud";
 
         // Create a connection
         $connection = new mysqli($servername, $username, $password, $database);
