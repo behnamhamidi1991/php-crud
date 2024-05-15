@@ -53,15 +53,15 @@
         while ($row = $result->fetch_assoc()) {
           echo "
           <tr>
-          <td>10</td>
-          <td>Bill Gates</td>
-          <td>bill.gates@microsoft.com</td>
-          <td>+987654321</td>
-          <td>New York, USA</td>
-          <td>18/05/2022</td>
+          <td>$row[id]</td>
+          <td>$row[name]</td>
+          <td>$row[email]</td>
+          <td>$row[phone]</td>
+          <td>$row[address]</td>
+          <td>$row[created_at]</td>
           <td>
-            <a href='/' class='btn btn-primary btn-sm'>Edit</a>
-            <a href='/' class='btn btn-danger btn-sm'>Delete</a>
+            <a href='/myshop/edit.php?id=$row[id]' class='btn btn-primary btn-sm'>Edit</a>
+            <a href='/myshop/delete.php=$row[id]' class='btn btn-danger btn-sm'>Delete</a>
           </td>
         </tr>
           ";
