@@ -20,6 +20,30 @@
         <thead>
           <?php
             $servername = "localhost";
+            $username = "behnam";
+            $password = "123456";
+            $database = "myshop";
+
+            // Create a connection
+            $connection = new mysqli($servername, $username, $password, $database);
+
+            // Check the connection
+            if ($connection->connect_error) {
+              die("Connection Failed!" . $connection->connect_error);
+            }
+
+            // Read all row from database table
+            $sql = "SELECT * FROM clients";
+            $results = $connection->query($sql);
+
+            if (!$results) {
+              die("Invalid query: " .$connection->error);
+            }
+
+            // Read data of each row
+            while($row = $result->fetch_assoc()) {
+              
+            }
 
           ?>
           <tr>
