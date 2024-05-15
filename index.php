@@ -51,21 +51,24 @@
 
         // Read data of each row
         while ($row = $result->fetch_assoc()) {
-          echo "";
+          echo "
+          <tr>
+          <td>10</td>
+          <td>Bill Gates</td>
+          <td>bill.gates@microsoft.com</td>
+          <td>+987654321</td>
+          <td>New York, USA</td>
+          <td>18/05/2022</td>
+          <td>
+            <a href='/' class='btn btn-primary btn-sm'>Edit</a>
+            <a href='/' class='btn btn-danger btn-sm'>Delete</a>
+          </td>
+        </tr>
+          ";
         }
 
         ?>
 
-        <td>10</td>
-        <td>Bill Gates</td>
-        <td>bill.gates@microsoft.com</td>
-        <td>+987654321</td>
-        <td>New York, USA</td>
-        <td>18/05/2022</td>
-        <td>
-          <a href="/" class="btn btn-primary btn-sm">Edit</a>
-          <a href="/" class="btn btn-danger btn-sm">Delete</a>
-        </td>
       </tbody>
     </table>
   </div>
