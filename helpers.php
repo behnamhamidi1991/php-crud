@@ -21,7 +21,7 @@ function basePath($path = '')
  */
 function loadView($name)
 {
-    $viewPath = require basePath("views/{$name}.view.php");
+    $viewPath = basePath("views/{$name}.view.php");
     if (file_exists($viewPath)) {
         require $viewPath;
     } else {
@@ -44,4 +44,33 @@ function loadPartial($name)
     } else {
         echo "Partial '{$name}' not found!";
     }
+}
+
+
+// Here I add "inspect" and "inpectAndDie" functions to check a few functionalities when it's needed
+
+/**
+ * Inspect (a) value(s)
+ * 
+ * @param mixed $value
+ * @return void
+ */
+function inspect($value)
+{
+    echo '<pre>';
+    var_dump($value);
+    echo '<pre>';
+}
+
+/**
+ * Inspect (a) value(s) and die
+ * 
+ * @param mixed $value
+ * @return void
+ */
+function inspectAndDie($value)
+{
+    echo '<pre>';
+    die(var_dump($value));
+    echo '</pre>';
 }
