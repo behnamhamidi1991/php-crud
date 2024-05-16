@@ -8,6 +8,7 @@
 //     '404' => 'controllers/error/404.php'
 // ];
 
+// FIRST: URI ||| SECOND: CONTROLLER
 $router->get('/', 'controllers/home.php');
 $router->get('/listings', 'controllers/listings/index.php');
 $router->get('/listings/create', 'controllers/listings/create.php');
