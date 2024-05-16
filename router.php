@@ -82,9 +82,9 @@ class Router
                 require basePath($route['controller']);
                 return;
             }
-            http_response_code(404);
-            loadView('error/404');
-            exit;
         }
+        http_response_code(404);
+        loadView('error/404');
+        exit;
     }
 }
